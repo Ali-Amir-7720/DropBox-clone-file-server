@@ -1,4 +1,4 @@
-Dropbox Clone: Multi-Threaded File Storage Server
+**Dropbox Clone: Multi-Threaded File Storage Server**
 A small Dropbox-like file storage server written in C for the Operating Systems course (Fall 2026). Users sign up, log in, and then upload, download, delete and list their files over TCP, with a fixed storage quota per user. Many clients can be connected at the same time, and one user may be logged in from several clients at once.
 
 The project is about concurrency structure rather than networking: every request passes through two thread-safe queues and two thread pools before it touches the disk, and the result is delivered back to the exact client session that asked for it.
